@@ -1,12 +1,10 @@
-/*#letterDisplay {
+#letterDisplay {
     display: flex;
     gap: 10px;
     list-style: none;
-}*/
-
-#letterDisplay {
     width: 25px;
-    border-bottom: solid black 3px;
-    margin-bottom: 10px;
+    margin-bottom: 45px;
 }
+
+
 
