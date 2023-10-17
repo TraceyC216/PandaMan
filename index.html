@@ -8,14 +8,37 @@
     <title>PandaMan</title>
   </head>
   <body>
-    <div id="panda"></div>
-    <h3>number of tries left</h3>
-    <div id="attempts"></div>
-    <button id="begin" onclick="beginGame">Let's play!</button>
-    <div id="letterDisplay">
+    <div id="game">
+      <h3>number of tries left</h3>
+      <div id="attempts"></div>
+      <button id="begin" onclick="beginGame">Let's play!</button>
+      <div id="letterDisplay">
         <!--letter guess slashes go here-->
+      </div>
+      <div id="letterBank"></div>
     </div>
-    <div id="letterBank"></div>
+
+    <div id="panda">
+      <div id="head"><img id="head" src="pandahead.png" height="250px" /></div>
+      <div id="torso">
+        <div id="body"><img src="pandabody.png" height="250px" /></div>
+        <div id="leftarm">
+          <img class="arm" src="pandaarm1.png" height="150px" />
+        </div>
+        <div id="rightarm">
+          <img class="arm" src="pandaarm2.png" height="150px" />
+        </div>
+      </div>
+      <div id="legs">
+      <div id="leftleg">
+        <img class="leg" src="pandaleg1.png" height="150px" />
+      </div>
+      <div id="rightleg">
+        <img class="leg" src="pandaleg2.png" height="150px" />
+      </div>
+    </div>
+    </div>
+    <img id="slide" src="slide.png" height="500px" />
     <button onclick="restart">Restart</button>
   </body>
 </html>

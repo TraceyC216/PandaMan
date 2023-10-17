@@ -1,3 +1,13 @@
+body {
+    background-color: lightcyan;
+}
+
+ #game{
+   position: absolute;
+   top: 50px;
+    right: 200px;
+}
+
 #letterDisplay {
     display: flex;
     gap: 10px;
@@ -6,5 +16,69 @@
     margin-bottom: 45px;
 }
 
+button{
+    background-color: #A2C3EB;
+    padding: 10px;
+    font-size: 12px;
+}
 
 
+#panda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#torso {
+   display: flex;
+  
+}
+
+#head {
+    position: absolute;
+    top: 20px;
+    left: 178px;
+    
+}
+
+#rightarm{
+    position: absolute;
+    top: 168px;
+    left: 440px;
+}
+#body {
+    position: absolute;
+    top: 125px;
+    margin-left: -621px;
+   }
+
+#leftarm {
+    position: absolute;
+    top: 167px;
+    left: 375px;
+}
+
+#legs {
+   display: flex;
+}
+
+#rightleg {
+    position: absolute;
+    top: 253px;
+    left: 370px;
+}
+
+#leftleg {
+    position: absolute;   
+   top: 253px;
+   left: 445px;
+
+}
+
+#slide{
+    position: absolute;
+    top: 250px;
+    left: 200px;
+   z-index: -1;
+}

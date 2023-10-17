@@ -27,16 +27,16 @@ const pandaWords = [
   "wwf logo",
   "tree climber",
 ];
-
+pandaParts = ["#leftLeg", "#rightLeg", "#leftarm", "#rightArm", "#body", "#head"]
 
 let playerGuess;
-let maxWrong;
+
 function wrongGuess() {
     let attempts = document.getElementById("attempts");
-    attempts.textContent = "6";
-
- 
-
+    attempts.innerText = 6;
+    let livesLeft = document.createElement("div");
+    
+    
 }
 wrongGuess()
 
@@ -55,6 +55,8 @@ function beginGame() {
     letterDisplay.appendChild(divDash);
   }
 }
+
+
 function guessLtr(button, chooseLetter) {
 let letterDisplay = document.getElementById("letterDisplay").children;
 console.log(letterDisplay) 
@@ -63,11 +65,12 @@ console.log(letterDisplay)
      // console.log("this letter is yes")
      letterDisplay[i].textContent = chooseLetter
     } else {
-        attempts.innerText -= 1;
+      
+      
       //console.log("this letter is no")
     }
   }
-//put disable here
+button.disabled = true;
 
 }
 
@@ -98,7 +101,7 @@ function checkLetter() {
 }
 
 //make the guesses remaining
-let life = 10;
+
 //decrement the word array(?)
 
 //win/loss notification - remember to include answer
