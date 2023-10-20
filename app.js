@@ -27,18 +27,14 @@ const pandaWords = [
   "wwf logo",
   "tree climber",
 ];
-pandaParts = ["#leftLeg", "#rightLeg", "#leftarm", "#rightArm", "#body", "#head"]
-
-let playerGuess;
-
-function wrongGuess() {
-    let attempts = document.getElementById("attempts");
-    attempts.innerText = 6;
-    let livesLeft = document.createElement("div");
-    
-    
-}
-wrongGuess()
+pandaParts = [
+  "#body",
+  "#head",
+  "#leftLeg",
+  "#rightLeg",
+  "#leftarm",
+  "#rightArm",
+];
 
 //randomly select word from pandaWords array and display as letterDisplay
 function beginGame() {
@@ -50,28 +46,49 @@ function beginGame() {
   letterDisplay.innerHTML = "";
   for (let i = 0; i < pandaWord.length; i++) {
     let divDash = document.createElement("div");
-    divDash.classList.add("letter")
+    divDash.classList.add("letter");
     divDash.textContent = "___";
     letterDisplay.appendChild(divDash);
   }
 }
 
+let livesLeft = 6;
+let attempts = document.getElementById("attempts");
+attempts.innerText = livesLeft;
+let losses = (document.getElementById("panda").style.display = "none");
 
-function guessLtr(button, chooseLetter) {
-let letterDisplay = document.getElementById("letterDisplay").children;
-console.log(letterDisplay) 
-  for (i = 0; i < playerGuess.length; i++) {
-    if (playerGuess[i] === chooseLetter) {
-     // console.log("this letter is yes")
-     letterDisplay[i].textContent = chooseLetter
-    } else {
-      
-      
-      //console.log("this letter is no")
+function pandaReveal() {
+  for (let i = 0; i < pandaParts.length; i++) {
+    if (playerGuess[i] !== chooseLetter) {
+      pandaParts[i].style.display = "block";
     }
   }
-button.disabled = true;
+}
 
+function guessLtr(button, chooseLetter) {
+  let letterDisplay = document.getElementById("letterDisplay").children;
+  console.log(letterDisplay);
+  let found = false;
+  for (let i = 0; i < playerGuess.length; i++) {
+    if (playerGuess[i] === chooseLetter) {
+      // console.log("this letter is yes")
+      letterDisplay[i].textContent = chooseLetter;
+      found = true;
+      attempts.textContent = "Congratulations! You win!";
+    }
+  }
+
+  if (found === false) {
+    livesLeft--;
+  }
+
+
+  attempts.innerText = livesLeft;
+  if (livesLeft === 0) {
+    attempts.textContent = `Sorry! The word was ${playerGuess}`;
+  }
+
+  button.disabled = true;
 }
 
 //create the keyboard (.fromCharCode)
@@ -80,16 +97,12 @@ for (let i = 97; i <= 122; i++) {
   const button = document.createElement("button");
   button.innerText = String.fromCharCode(i);
   keyboard.appendChild(button);
-  button.addEventListener("click", (event) =>{
-    console.log(event.target, String.fromCharCode(i))
-    guessLtr(event.target, String.fromCharCode(i))}
-  );
+  button.addEventListener("click", (event) => {
+    console.log(event.target, String.fromCharCode(i));
+    guessLtr(event.target, String.fromCharCode(i));
+  });
 }
 beginGame();
-
-
-
-
 
 //don't forget to disbale button once selected
 //check setAttribrute("disabled", "")

@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Englebert&display=swap" rel="stylesheet">
     <script src="app.js" defer></script>
     <title>PandaMan</title>
   </head>
@@ -11,14 +14,14 @@
     <div id="game">
       <h3>number of tries left</h3>
       <div id="attempts"></div>
-      <button id="begin" onclick="beginGame">Let's play!</button>
+      <!--<button id="begin" onclick="beginGame">Let's play!</button>-->
       <div id="letterDisplay">
         <!--letter guess slashes go here-->
       </div>
       <div id="letterBank"></div>
     </div>
 
-    <div id="panda">
+    <div id="panda" class="hidden">
       <div id="head"><img id="head" src="pandahead.png" height="250px" /></div>
       <div id="torso">
         <div id="body"><img src="pandabody.png" height="250px" /></div>
