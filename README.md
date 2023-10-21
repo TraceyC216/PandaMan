@@ -26,7 +26,7 @@ This is a hangman inspired game where the player will solve the word by choosing
 [GitHub]
 
 ##Works Cited
-*Slide image from <a href="https://www.vecteezy.com/?utm_source=vecteezy-download&utm_medium=license-info-pdf&utm_campaign=license-info-document"></a>Vecteezy.com
+*Slide image from <a href="https://www.vecteezy.com/?utm_source=vecteezy-download&utm_medium=license-info-pdf&utm_campaign=license-info-document">Vecteezy.com</a>
 
 ## <a name="author"></a>About the Author
 I am a Software Engineer specializing in FullStack Development to create functional visual projects. I excel at collaboration and understand the importance and impact a role has to a business. I aspire to bring my strengths in technology and appreciation of aesthetics and mood to a company’s online presence and I’m looking to be a part of a team that fills a customer's needs related to a subject close to their hearts.
