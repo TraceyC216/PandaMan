@@ -21,7 +21,6 @@ This is a hangman inspired game where the player will solve the word by choosing
 * As a user, I should see how many incorrect guesses I have remaining
 
 ## <a name="deployment"></a>Deployed Link
-https://github.com/TraceyC216/PandaMan.git
 
 *You can view the repository:
 [GitHub]
